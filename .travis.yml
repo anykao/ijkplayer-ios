@@ -1,13 +1,12 @@
-language: android
-android:
-  components:
-    - platform-tools
-    - tools
-    - build-tools-23.0.3
-    - android-23
-    - extra-android-support
-    - extra-android-m2repository
-
+os: osx
+language: generic
+osx_image: xcode9.4
+before_script:
+  - brew update
+  - brew install yasm
 script:
-    - cd android/ijkplayer
-    - ./gradlew assemble
+  - ./init-ios.sh arm64
+  - cd ios
+  - ./compile-ffmpeg.sh clean
+  - ./compile-ffmpeg.sh arm64
+  - git status
