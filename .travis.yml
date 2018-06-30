@@ -3,7 +3,6 @@ language: generic
 osx_image: xcode9.4
 before_script:
   - brew update
-  - brew install openssl
   - brew install yasm
 script:
   - ./init-ios.sh arm64
