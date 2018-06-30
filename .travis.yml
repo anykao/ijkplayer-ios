@@ -7,7 +7,8 @@ before_script:
 script:
   - ./init-ios.sh arm64
   - cd ios
-  - ./compile-openssl.sh
+  - ./compile-openssl.sh clean
+  - ./compile-openssl.sh arm64
   - ./compile-ffmpeg.sh clean
   - ./compile-ffmpeg.sh arm64
   - git status
