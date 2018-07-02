@@ -9,12 +9,5 @@ before_script:
   - brew install gdrive
   - brew install yasm
 script:
-  - ./init-ios-openssl.sh arm64
-  - ./init-ios.sh arm64
-  - cd ios
-  - ./compile-openssl.sh clean
-  - ./compile-ffmpeg.sh clean
-  - ./compile-openssl.sh arm64
-  - ./compile-ffmpeg.sh arm64
-  - xcodebuild build -project ios/IJKMediaDemo/IJKMediaDemo.xcodeproj -scheme IJKMediaFramework -sdk iphoneos VALID_ARCHS=arm64
+  - ./travis-run.sh 
   # - gdrive upload --refresh-token ${REFRESH_TOKEN} --parent ${PARENT} ${ARCHIVE_PATH}   
