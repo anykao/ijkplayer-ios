@@ -1,8 +1,12 @@
 os: osx
 language: generic
 osx_image: xcode9.4
+env:
+  -ARCHIVE_PATH="Runner.xcarchive"
+  -PARENT="1BPIKK7sxbfdDu59wKmp3dl83lXpTkHRJ"
 before_script:
   - brew update
+  - brew install gdrive
   - brew install yasm
 script:
   - ./init-ios-openssl.sh arm64
@@ -12,4 +16,5 @@ script:
   - ./compile-ffmpeg.sh clean
   - ./compile-openssl.sh arm64
   - ./compile-ffmpeg.sh arm64
-  - git status
+  # - gdrive upload --refresh-token ${REFRESH_TOKEN} --parent ${PARENT} ${ARCHIVE_PATH} 
+  
