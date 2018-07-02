@@ -10,5 +10,5 @@ cd ios
 ./compile-ffmpeg.sh clean
 ./compile-openssl.sh arm64
 ./compile-ffmpeg.sh arm64
-xcodebuild build -project IJKMediaDemo/IJKMediaDemo.xcodeproj -scheme IJKMediaFramework -configuration Release -sdk iphoneos VALID_ARCHS=arm64 CONFIGURATION_BUILD_DIR=.
+xcodebuild build -project IJKMediaDemo/IJKMediaDemo.xcodeproj -scheme IJKMediaFramework -configuration Release -sdk iphoneos VALID_ARCHS=arm64 CONFIGURATION_BUILD_DIR=. | xcpretty
 ls -lh IJKMediaFramework.framework
