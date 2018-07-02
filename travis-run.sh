@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+
+# Exit on errors.
+set -e
+
 ./init-ios-openssl.sh arm64
 ./init-ios.sh arm64
 cd ios
