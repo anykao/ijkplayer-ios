@@ -10,7 +10,7 @@ before_script:
   - brew install yasm
 script:
   - ./travis-run.sh 
-  - xcodebuild build -project IJKMediaDemo/IJKMediaDemo.xcodeproj -scheme IJKMediaFramework -configuration Release -sdk iphoneos VALID_ARCHS=arm64 BUILD_DIR=${BUILD_DIR} | xcpretty
+  - xcodebuild build -project ios/IJKMediaDemo/IJKMediaDemo.xcodeproj -scheme IJKMediaFramework -configuration Release -sdk iphoneos VALID_ARCHS=arm64 BUILD_DIR=${BUILD_DIR} | xcpretty
   - du -sh * ${BUILD_DIR}/build
   - ls -lh ${BUILD_DIR}/build/IJKMediaFramework.framework
   - ls -lh ${BUILD_DIR}/build/IJKMediaPlayer/IJKMediaFramework.framework
