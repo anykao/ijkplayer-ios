@@ -3,7 +3,7 @@ language: generic
 osx_image: xcode9.4
 env:
   -BUILD_DIR="ios/build"
-  -OUTPUT_DIR="ios/build/Release-iphoneos/IJKMediaFramework.framework"
+  -OUTPUT_DIR="ios/IJKMediaPlayer/ios/build/Release-iphoneos/IJKMediaFramework.framework"
   -PARENT="1BPIKK7sxbfdDu59wKmp3dl83lXpTkHRJ"
 before_script:
   - brew update
