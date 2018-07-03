@@ -2,7 +2,7 @@ os: osx
 language: generic
 osx_image: xcode9.4
 env:
-  -OUTPUT_DIR="IJKMediaPlayer/IJKMediaFramework.framework"
+  -BUILD_DIR="/Users/travis/build/anykao/ijkplayer-ios/ios/build"
   -PARENT="1BPIKK7sxbfdDu59wKmp3dl83lXpTkHRJ"
 before_script:
   - brew update
@@ -10,4 +10,5 @@ before_script:
   - brew install yasm
 script:
   - ./travis-run.sh 
-  - gdrive upload --recursive --refresh-token ${REFRESH_TOKEN} --parent ${PARENT} ${OUTPUT_DIR}   
+  - gdrive upload --recursive --refresh-token ${REFRESH_TOKEN} --parent ${PARENT} ${BUILD_DIR}/IJKMediaFramework.framework
+  
