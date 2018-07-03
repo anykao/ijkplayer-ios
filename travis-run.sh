@@ -11,4 +11,4 @@ cd ios
 ./compile-openssl.sh arm64
 ./compile-ffmpeg.sh arm64
 xcodebuild build -project IJKMediaDemo/IJKMediaDemo.xcodeproj -scheme IJKMediaFramework -configuration Release -sdk iphoneos VALID_ARCHS=arm64 BUILD_DIR=/Users/travis/build/anykao/ijkplayer-ios/ios/build | xcpretty
-du -sh /Users/travis/build/anykao/ijkplayer-ios/ios/build
+du -sh * /Users/travis/build/anykao/ijkplayer-ios/ios/build
